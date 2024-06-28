@@ -15,8 +15,8 @@ const [currentIndex, setCurrentIndex] = useState(0);
 useEffect(() => {
   setInterval(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % imgArray.length);
-  }, 3000);
-}, [imgArray.length]);
+  }, 3000)
+}, [imgArray.length])
   return <>
   <Navbar shoes={sneakerState} setArray={setArray}/>
 <Routes>
@@ -70,7 +70,7 @@ useEffect(() => {
         </div>
     </button></Link>
   </div>
-  <div className='flex flex-col items-center'>
+
     <div className="flex items-center justify-center h-auto w-full mt-10 flex-wrap gap-5">
     {sneakerState.map((item, shutUp) => {return <motion.div initial={{opacity: 0, x: -70}} animate={{opacity: 1, x: 0}} transition={{duration: 0.5, ease: 'backInOut', delay: item.id * 0.2}} key={shutUp} className='h-auto w-96 border-[1px] border-[#d2d2d2] rounded-lg flex items-center pb-5 gap-12 justify-center cursor-pointer flex-col bg-[#ececec]'>
       <img src={item.image} className='w-full border-tr-rounded-lg border-tl-rounded-lg h-[230px] object-cover'></img>
@@ -86,7 +86,6 @@ useEffect(() => {
       </div>
     </motion.div>
   })}
-  </div>
   </div>
   </>}/>
   <Route path={`/buy/:index`} element={<Buy shoes={sneakerState}/>}
