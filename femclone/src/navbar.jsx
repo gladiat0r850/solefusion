@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, Route, Routes, useNavigate } from 'react-router-dom';
 import { AiOutlineSearch } from "react-icons/ai";
 import Mansection from './mansection';
-import Bigbootycheeks from './femaleSection';
+import WomenSection from './femaleSection';
 import './App.css';
 import SearchQuery from './SearchQuery';
 import KidSection from './children';
@@ -49,9 +49,9 @@ function Navbar({ shoes, setArray }) {
       <Routes>
         <Route path='/AdminPanel' element={<AdminPanel shoes={shoes} setArray={setArray} />} />
         <Route path='/querySection' element={<SearchQuery setArray={setArray} bouttaBeFiltered={shoes} inputQuery={inputQuery} />} />
-        <Route path='/femalesection' element={<Bigbootycheeks shoes={shoes} />} />
+        <Route path='/femalesection' element={<WomenSection shoes={shoes} />} />
         <Route path='/mansection' element={<Mansection shoes={shoes} />} />
-        <Route path='/KidsSection' element={<KidSection shoes={shoes} />} />
+        <Route path='/kidsection' element={<KidSection shoes={shoes} />} />
         <Route path='/filter' element={<Filter shoes={shoes} setArray={setArray}/>} />
       </Routes>
     </>

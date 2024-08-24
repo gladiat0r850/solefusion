@@ -17,7 +17,6 @@ function AdminPanel({shoes, setArray}) {
             setPrice(0)
         }
     }
-    
     return <body className='overflow-hidden'>
      <div className="flex h-[90vh] justify-between items-center">
      <div className="flex h-screen w-64 bg-slate-200 gap-12 mt-44 flex-col">
@@ -36,10 +35,10 @@ function AdminPanel({shoes, setArray}) {
                     <textarea placeholder='Description...' className='p-2 h-32 w-96 outline-none resize-none rounded-md' value={desc} onChange={e => setDescription(e.target.value)}></textarea>
                 </div>
             <div className="flex gap-10 items-center">
-                <button onClick={addNewShoe} className='h-10 w-72 rounded-md bg-gradient-to-r from-orange-400 to-orange-600 text-white font-normal mt-5 text-lg'>SUBMIT</button>
+                <button name='btn' onClick={addNewShoe} className='h-10 w-72 rounded-md bg-gradient-to-r from-orange-400 to-orange-600 text-white font-normal mt-5 text-lg'>SUBMIT</button>
                 <div className="flex">
-                <button onClick={() => setGender('Men')} className=' w-16 h-8 bg-slate-300 rounded-md'>M</button>
-                <button onClick={() => setGender('Women')} className='h-8 w-16 bg-slate-300 rounded-md'>F</button>
+                <button name='btn' onClick={() => setGender('Men')} className=' w-16 h-8 bg-slate-300 rounded-md'>M</button>
+                <button name='btn' onClick={() => setGender('Women')} className='h-8 w-16 bg-slate-300 rounded-md'>F</button>
             </div>
             </div>
         </div>

@@ -21,8 +21,8 @@ function Filter({shoes, setArray}) {
                   <img src={item.image} className='w-full border-tr-rounded-lg border-tl-rounded-lg h-[230px] object-cover'></img>
       <div className="flex flex-col gap-5 justify-center mt-5 text-start">
       <h1 className='text-xl font-medium w-64'>{item.name}</h1>
-      </div><button onClick={() => setArray(shoes.filter(deleted => item.name !== deleted.name))} className='h-10 w-64 rounded-md font-semibold bg-gradient-to-r flex justify-center items-center gap-3 text-white from-purple-700 to-purple-800'>Delete</button>
-
+      </div>
+      <button onClick={() => setArray(shoes.filter(deleted => item.name !== deleted.name))} className='h-10 w-64 rounded-md font-semibold bg-gradient-to-r flex justify-center items-center gap-3 text-white from-purple-700 to-purple-800'>Delete</button>
                 </div>
               })}
             </div>
